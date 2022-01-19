@@ -1,0 +1,55 @@
+%http://tex.stackexchange.com/questions/110681/global-legend-for-multiple-figures
+\documentclass[a4paper,11pt]{book}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.9}
+\usepackage{subfig}
+\usepackage{pgfplotstable}
+\usetikzlibrary{plotmarks}
+\usepackage{amssymb,amsmath,amsthm,amscd}
+\usepackage{mathrsfs}
+\usepackage[greek,francais]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{placeins}
+
+\newenvironment{customlegend}[1][]
+{\begingroup \csname pgfplots@init@cleared@structures\endcsname\pgfplotsset{#1}}
+{\csname pgfplots@createlegend\endcsname\endgroup}
+
+\def\addlegendimage{\csname pgfplots@addlegendimage\endcsname}
+    
+\begin{document}
+\begin{figure}
+
+\subfloat{\hspace{3cm}\begin{tikzpicture}
+        \begin{customlegend}[legend columns=3,legend style={align=left,column sep=2ex},legend entries={Dimers,Intermediate,Capsid}]
+        \addlegendimage{color=blue,solid,line width=1.5pt}
+        \addlegendimage{color=green,solid,line width=1.5pt}   
+        \addlegendimage{color=red,solid,line width=1.5pt}
+        \end{customlegend}
+     \end{tikzpicture}}
+\vspace{-0.3cm}
+\subfloat{
+  \newlength\figureheight 
+  \newlength\figurewidth 
+  \setlength\figureheight{7cm} 
+  \setlength\figurewidth{5.4cm}
+  \raisebox{-0.52\height}    {\input{TIKZ_NW.tikz}}}\hspace{-0.5cm}
+\subfloat{ 
+  \setlength\figureheight{7cm} 
+  \setlength\figurewidth{5.4cm}
+  \raisebox{-0.52\height}{\input{TIKZ_NE.tikz}}}	
+\vspace{-0.5cm}
+\subfloat{ 
+  \setlength\figureheight{7cm} 
+  \setlength\figurewidth{5.4cm}
+  \raisebox{-0.52\height}{\input{TIKZ_SW.tikz}}}\hspace{-0.5cm}	
+\subfloat{ 
+  \setlength\figureheight{7cm} 
+  \setlength\figurewidth{5.4cm}
+  \raisebox{-0.52\height}{\input{TIKZ_SE.tikz}}}	
+        
+\caption{A plot}
+\label{fig:plot2}
+\end{figure}
+\end{document}

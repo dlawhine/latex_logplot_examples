@@ -1,0 +1,38 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[a4paper,11pt]{book}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.9}
+\usepackage{subfig}
+\usepackage{pgfplotstable}
+\usetikzlibrary{plotmarks}
+\usepackage{amssymb,amsmath,amsthm,amscd}
+\usepackage{mathrsfs}
+\usepackage[greek,francais]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{placeins}
+
+\begin{document}
+%\selectlanguage{francais}
+%\newcommand\fr{\selectlanguage{francais}}
+
+\begin{figure}
+\centering
+  \newlength\figureheight 
+  \newlength\figurewidth 
+\subfloat{ 
+  \setlength\figureheight{9cm} 
+  \setlength\figurewidth{8cm}
+  \raisebox{-0.52\height}{\input{TIKZ_subfloat_1x2_textarrows_A.tikz}}}
+  \subfloat{ 
+  \setlength\figureheight{9.1cm} 
+  \setlength\figurewidth{8cm}
+  \raisebox{-0.51\height}{\input{TIKZ_subfloat_1x2_textarrows_A.tikz}}}	
+\caption{A plot}
+\label{fig:plot2}
+\end{figure}
+
+
+\end{document}
+
+  

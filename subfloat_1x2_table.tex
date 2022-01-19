@@ -1,0 +1,44 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[a4paper,11pt]{book}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.9}
+\usepackage{subfig}
+\usepackage{pgfplotstable}
+\usetikzlibrary{plotmarks}
+\usepackage{amssymb,amsmath,amsthm,amscd}
+\usepackage{mathrsfs}
+\usepackage[greek,francais]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{placeins}
+
+\begin{document}
+%\selectlanguage{francais}
+%\newcommand\fr{\selectlanguage{francais}}
+
+\begin{figure}
+\centering
+\subfloat{
+  \newlength\figureheight 
+  \newlength\figurewidth 
+  \setlength\figureheight{5cm} 
+  \setlength\figurewidth{5cm}
+  \raisebox{-0.52\height}    {\input{TIKZ_subfloat_1x2_table.tikz}}}\quad	
+\subfloat{\raisebox{0.06\height}
+ {\scalebox{1.2}{\begin{tabular}[c]{|c|c|c|}\hline
+     i & $C({\bf{U_i}})$& $C({\bf{V_i}})$ \\ \hline
+        1 & 0.9121 & 0.9869 \\
+        2 & 0.9751 & 0.9424 \\
+        3 & 0.4529 & 0.1289 \\
+        4 & 0.5189 & 0.3492 \\
+        5 & 0.4765 & 0.1145 \\
+        6 & 0.2055 & 0.0484 \\ \hline
+        \end{tabular}}}} 
+  \caption{A plot}
+\label{fig:plot2}
+\end{figure}
+
+
+\end{document}
+
+  

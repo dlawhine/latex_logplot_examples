@@ -1,0 +1,79 @@
+% This file was created by matlab2tikz.
+% Minimal pgfplots version: 1.3
+%
+%The latest updates can be retrieved from
+%  http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz
+%where you can also make suggestions and rate matlab2tikz.
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=1\figurewidth,
+height=\figureheight,
+at={(0\figurewidth,0\figureheight)},
+scale only axis,
+separate axis lines,
+every outer x axis line/.append style={black},
+every x tick label/.append style={font=\color{black}},
+xmin=0.5,
+xmax=10.5,
+xlabel={Rank k},
+every outer y axis line/.append style={black},
+every y tick label/.append style={font=\color{black}},
+ymode=log,
+ymin=0.01,
+ymax=10,
+yminorticks=true,
+ylabel={Residual},
+legend style={legend cell align=left,align=left,fill=white,row sep=0.5cm}
+]
+\addplot [color=blue,solid,line width=1.0pt,mark size=3.3pt,mark=*,mark options={solid}]
+  table[row sep=crcr]{%
+1	7.58237461396991\\
+2	0.347417131912202\\
+3	0.0925575207874681\\
+4	0.0657307020480026\\
+5	0.0542082453439331\\
+6	0.0481580492655747\\
+7	0.0438549567877118\\
+8	0.0403611675691392\\
+9	0.0371685872322872\\
+10	0.0348133542764296\\
+11	0.0334618201364744\\
+12	0.0322369144559021\\
+13	0.0310148727945974\\
+14	0.0298804102953261\\
+15	0.0288948643390899\\
+16	0.028103186658675\\
+17	0.0273977540922969\\
+18	0.0267109467837659\\
+19	0.0260609170432246\\
+20	0.0255140230486339\\
+};
+\addlegendentry{$\sum\limits_{i=k+1}^{N} {s_{i}^{2}}$};
+\addplot [color=red,solid,line width=1.0pt]
+  table[row sep=crcr]{%
+1	0.179953322929358\\
+2	0.179123974330976\\
+3	0.178294625403377\\
+4	0.177465276141944\\
+5	0.176635926541977\\
+6	0.175806576598684\\
+7	0.174977226307183\\
+8	0.174147875662499\\
+9	0.173318524659562\\
+10	0.172489173293205\\
+11	0.17165982155816\\
+12	0.170830469449057\\
+13	0.170001116960422\\
+14	0.169171764086674\\
+15	0.168342410822119\\
+16	0.167513057160954\\
+17	0.166683703097258\\
+18	0.165854348624992\\
+19	0.165024993737998\\
+20	0.16419563842999\\
+};
+\addlegendentry{$\mu\nu\sigma^{2}$};
+\end{axis}
+\end{tikzpicture}%
