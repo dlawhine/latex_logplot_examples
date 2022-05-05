@@ -1,4 +1,4 @@
-A collection of different kind of graphs I used during for my PhD thesis using: subplots, loglog, grids, personalized legends, etc.
+A collection of different kind of graphs I used during for my PhD thesis using: subplots, loglog, grids, personalized legends, arrows, texts, double y-axes, etc.
 The codes to be executed are in the .tex files.
 The data to be plotted are in the .tikz files.
 The rendering are the .pdf files
